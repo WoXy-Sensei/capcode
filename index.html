@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="codemirror/theme/base16-dark.css" id="themeCSS"/>
+  </head>
+  <body>
+    <h3 class="lead-name">CAPCODE</h3>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.br
+      <br />
+      Iste, est aspernatur vel porro maxime architecto.
+    </p>
+    <div class="editor">
+      <div class="editorToolbar">
+        <button id="lineNumbersBtn">Line Numbers</button>
+        <label class="select">
+            <span>Theme</span>
+            <select name="" id="themeSwitcher">
+                <option value="3024-night">3024-Night</option>
+                <option value="base16-dark" selected>base16-dark</option>
+            </select>
+        </label>
+        
+        <label class="select">
+            <span>Language</span>
+            <select name="" id="languageSwitcher">
+                <option value="python" selected>Python</option>
+                <option value="php">PHP</option>
+                <option value="javascript">Javascript</option>
+                <option value="xml">XML</option>
+            </select>
+        </label>
+        <label class="select">
+            <span>Size</span>
+            <select name="" id="fontSizeSwitcher">
+                <option value="14px">14px</option>
+                <option value="16px" selected>16px</option>
+                <option value="18px">18px</option>
+                <option value="20px">20px</option>
+            </select>
+        </label>
+        <input type="color" name="" id="colorPicker">
+        <label class="select exportSelect">
+            <span>Export</span>
+            <span class="exportOptions">
+                <span onclick="exportImage(1)">1x</span>
+                <span onclick="exportImage(2)">2x</span>
+                <span onclick="exportImage(3)">4x</span>
+            </span>
+        </label>
+      </div>
+      <div class="preview" id="preview">
+        <div class="previewInner">
+            <div class="previewTop">
+                <span></span>
+            </div>
+            <textarea id="codeEditor" cols="30" rows="10"></textarea>
+        </div>
+        
+      </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/javascript/javascript.js"></script>
+    <script src="codemirror/mode/clike/clike.js"></script>
+    <script src="codemirror/mode/python/python.js"></script>
+    <script src="codemirror/mode/php/php.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
