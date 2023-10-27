@@ -107,10 +107,7 @@ body {
   padding: 35px;
   flex-direction: column;
 }
-.editor .preview .previewInner {
-  box-shadow: rgb(0, 0, 0) 0px 7px 29px 0px;
-}
-.editor .preview .previewInner .previewTop {
+.editor .preview .previewTop {
   background: #0d0d0d;
   display: flex;
   height: 40px;
@@ -119,7 +116,7 @@ body {
   align-items: center;
   padding: 0 20px;
 }
-.editor .preview .previewInner .previewTop > span {
+.editor .preview .previewTop > span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -127,18 +124,18 @@ body {
   position: relative;
   margin-left: 15px;
 }
-.editor .preview .previewInner .previewTop > span::before, .editor .preview .previewInner .previewTop > span::after {
+.editor .preview .previewTop > span::before, .editor .preview .previewTop > span::after {
   width: inherit;
   height: inherit;
   border-radius: inherit;
   position: absolute;
   content: "";
 }
-.editor .preview .previewInner .previewTop > span::before {
+.editor .preview .previewTop > span::before {
   left: -20px;
   background-color: #ec0000;
 }
-.editor .preview .previewInner .previewTop > span::after {
+.editor .preview .previewTop > span::after {
   left: 20px;
   background-color: #00ff00;
 }
